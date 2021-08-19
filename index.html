@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background: #ddd;
+        margin: 20px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div v-if="showBooks">
+        <p>{{ title}} {{theDude}} --- {{year}}</p>
+      </div>
+      <button @click="toggle">
+        <span v-if="showBooks">Hide books</span>
+        <!-- <span v-if="!showBooks"
+          >Show books (only show these when it's false )</span
+        > -->
+        <span v-else>Show books</span>
+      </button>
+      <div v-show="showBooks">Currently showing books</div>
+      <!-- mouse events -->
+      <br />
+      <div class="box" @mouseover="handleEvent">mouse over</div>
+      <div class="box">mouse leave</div>
+      <div class="box">double click</div>
+      <div class="box"></div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="./app.js"></script>
+</html>

@@ -16,6 +16,9 @@ const app = Vue.createApp({
       //reverse toggle button :D
       this.showBooks = !this.showBooks;
     },
+    handleEvent() {
+      console.log("event");
+    },
   },
 });
 //mount that app to this html element with and id of "app"
