@@ -13,7 +13,8 @@ const app = Vue.createApp({
   },
   methods: {
     toggle() {
-      this.showBooks = false;
+      //reverse toggle button :D
+      this.showBooks = !this.showBooks;
     },
   },
 });

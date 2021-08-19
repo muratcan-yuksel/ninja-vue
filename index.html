@@ -11,8 +11,13 @@
         <p>{{ title}} {{theDude}} --- {{year}}</p>
       </div>
       <button @click="toggle">
-        <span>Hide books</span>
+        <span v-if="showBooks">Hide books</span>
+        <!-- <span v-if="!showBooks"
+          >Show books (only show these when it's false )</span
+        > -->
+        <span v-else>Show books</span>
       </button>
+      <div v-show="showBooks">Currently showing books</div>
     </div>
   </body>
   <script src="https://unpkg.com/vue@next"></script>
