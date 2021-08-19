@@ -7,12 +7,12 @@
   </head>
   <body>
     <div id="app">
-      <h1>I'm the template now</h1>
-      <!-- if you fail to write the component name correctly
-      like if you write titles12 instead of title,
-      vue won't render anything on the page
-      it'll be just blank -->
-      <p>{{ title}} {{theDude}} --- {{year}}</p>
+      <div v-if="showBooks">
+        <p>{{ title}} {{theDude}} --- {{year}}</p>
+      </div>
+      <button @click="toggle">
+        <span>Hide books</span>
+      </button>
     </div>
   </body>
   <script src="https://unpkg.com/vue@next"></script>
