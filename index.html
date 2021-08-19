@@ -18,7 +18,12 @@
   <body>
     <div id="app">
       <div v-if="showBooks">
-        <p>{{ title}} {{theDude}} --- {{year}}</p>
+        <ul>
+          <li v-for="book in books">
+            <h3>{{book.title}}</h3>
+            <p>{{book.author}}</p>
+          </li>
+        </ul>
       </div>
       <button @click="toggle">
         <span v-if="showBooks">Hide books</span>
@@ -28,12 +33,6 @@
         <span v-else>Show books</span>
       </button>
       <div v-show="showBooks">Currently showing books</div>
-      <!-- mouse events -->
-      <br />
-      <div class="box" @mouseover="handleEvent">mouse over</div>
-      <div class="box">mouse leave</div>
-      <div class="box">double click</div>
-      <div class="box"></div>
     </div>
   </body>
   <script src="https://unpkg.com/vue@next"></script>

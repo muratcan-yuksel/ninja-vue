@@ -6,9 +6,11 @@ const app = Vue.createApp({
   data() {
     return {
       showBooks: true,
-      title: "empire strikes back",
-      theDude: "Darth Vader",
-      year: 1433,
+      books: [
+        { title: " name of the lol", author: "someone" },
+        { title: " name of the lol", author: "someone" },
+        { title: " name of the lol", author: "someone" },
+      ],
     };
   },
   methods: {
