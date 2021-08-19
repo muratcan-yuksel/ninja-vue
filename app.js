@@ -6,7 +6,17 @@ const app = Vue.createApp({
   data() {
     return {
       title: "empire strikes back",
+      theDude: "Darth Vader",
+      year: 1433,
     };
+  },
+  methods: {
+    changeTitle(titre) {
+      // console.log("you clciked");
+      //"this" represents the entire app component
+      // this.title = "brudas of peace";
+      this.title = titre;
+    },
   },
 });
 //mount that app to this html element with and id of "app"

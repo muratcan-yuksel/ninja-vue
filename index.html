@@ -8,7 +8,16 @@
   <body>
     <div id="app">
       <h1>I'm the template now</h1>
-      <p>{{ title}}</p>
+      <!-- if you fail to write the component name correctly
+      like if you write titles12 instead of title,
+      vue won't render anything on the page
+      it'll be just blank -->
+      <p>{{ title}} {{theDude}} --- {{year}}</p>
+
+      <button v-on:click="year++">Increase year</button>
+      <button @click="year--">Decrease year</button>
+      <!-- <div @click="title= 'something else'">change title</div> -->
+      <div @click="changeTitle('deathbringer')">change title</div>
     </div>
   </body>
   <script src="https://unpkg.com/vue@next"></script>
